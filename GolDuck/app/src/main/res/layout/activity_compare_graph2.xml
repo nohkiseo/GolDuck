@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.androidtown.golduck.CompareGraphActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/graphBack"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.1"
+            android:background="#00000000"
+            android:src="@drawable/button_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="0.8"
+            android:src="@drawable/graphex2" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.1"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="왼발"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/LeftGoal"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:layout_marginTop="50dip" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/LeftRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LeftGoal"
+            android:layout_marginTop="-133dip"
+            android:background="#00000000" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="오른발"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/RightGoal"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:layout_marginTop="50dip"
+            android:background="#00000000" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/RightRecord"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:background="#00000000"
+            android:layout_alignTop="@+id/RightGoal" />
+
+    </RelativeLayout>
+
+</LinearLayout>
